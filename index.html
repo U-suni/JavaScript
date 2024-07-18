@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum</title>
+
+</head>
+
+<body>
+    <!-- <h2 id="hello">안녕</h2> -->
+
+    <!-- <div class="alert-box" id="alert">
+       Alert박스
+        <button onclick="openEvent('none');">X</button>
+    </div> -->
+
+
+    <!-- <button onclick="openEvent('block');">버튼1</button>
+    <button onclick="openEvent('block');">버튼2</button> -->
+
+
+
+
+    <!-- <div class="show-box" id="parameterBox">
+        <span id="content">내용</span>입력하세요
+        <button id="close">X</button>
+    </div>
+
+    <button onclick="parameterEvent('block','아이디');">아이디 확인</button>
+    <button onclick="parameterEvent('block','비번');">비번 확인</button>
+    <button onclick="document.getElementsByClassName('alert-box')[0].setAttribute('style','display:block')">버튼</button> -->
+
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control" id="pw">
+                </div>
+                <button type="submit" class="btn-primary">전송</button>
+                <button type="button" class="btn-danger" id="close">닫기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        // document.querySelector('.btn-primary').addEventListener('click', function () {
+        //     if (document.querySelector('email').value == '') {
+        //         alert('안녕');
+        //         // e.preventDefault() 
+        //         return false;
+        //     } return true;
+        // })
+
+
+        if (1 == 3) {
+            console.log('gg');
+        } else if (3 == 3) {
+            console.log('gge');
+        } else if (3 == 3) {
+            console.log('gge');
+        } else if (3 == 3) {
+            console.log('gge');
+        }
+
+        // 아이디, 비밀번호 공백확인 및 비밀번호 6자리 이하 시 경고창 알림
+        document.querySelector('.btn-primary').addEventListener('click', function (e) {
+            if (document.getElementById('email', 'pw').value == '') {
+                alert('아이디 입력 안함');
+                e.preventDefault();
+            }
+            if (document.getElementById('pw').value == '') {
+                alert('비번 입력 안함');
+                e.preventDefault();
+
+            } else if (document.getElementById('pw').value.length < 6) {
+                alert('비번 6자리 이상');
+                e.preventDefault();
+
+            }
+        });
+
+
+        //input 제어하기 - input시 내용이 변결 될 때 마다 감지, change시 변경된 내용을 감지 
+        document.getElementById('email').addEventListener('input', function () {
+            console.log('fff');
+        });
+
+        document.getElementById('email').addEventListener('chang', function () {
+            console.log('fff');
+        });
+
+
+
+
+
+        // document.querySelector('.btn-primary').addEventListener('click', function (e) {
+        //     if (document.getElementById('email').value == '') {
+        //         alert('넘어가지 말라고');
+        //         e.preventDefault();
+        //     }
+        // });
+
+
+        // if (3 > 1) {
+        //     console.log('안녕');
+        //     // 조건이 참일 때 실행할 코드~~
+        // } else {
+        //     console.log('잘가');
+        //     // 위 조건이 참이 아닐 때 실행할 코드~~
+        // }
+
+    </script>
+
+    <div class="main-bg">
+        <h4>세일</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+
+
+    <button id="login">로그인</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+
+    <script>
+        //jQuery로 모달창 만들기 + 간단 애니메이션
+        $('#login').on('click', function () {
+            $('.black-bg').addClass('show-modal');
+        });
+
+        document.querySelector('.black-bg').addEventListener('click',
+            function (e) {
+                // if (e.target == this) {
+                //     document.querySelector('.show-modal').setAttribute('style', 'display:none');
+                // }
+
+                if (e.target == document.querySelector('.black-bg')) {
+                    document.querySelector('.show-modal').setAttribute('style', 'display:none');
+                }
+            })
+
+        // $('#test-btn').on('click', function () {
+        //     $('.test').slideUp();
+        // })
+
+
+        // $('.test').html('안녕');
+        // $('.test').css('color', 'red');
+        // $('.test').addClass('yellow-bg');
+
+
+
+        // $(document).ready(function () {
+        //     $('h4').addClass('yellow-bg');
+        // });
+    </script>
+
+
+
+    <!-- <script>
+        // function test(main, sub) {
+        //     this.q = main;
+        //     this.w = sub;
+        // }
+
+        // var nunu = new test('a', 2);
+        // var garen = new test('c', 'd');
+
+        // class Test {
+        //     constructor(main, sub){
+        //         this.gender = main;
+        //         this.age = sub;
+        //     }
+        //     sayAsk(){
+        //         alert(this.gender)
+        //     }
+        // }
+
+        // let useon = new Test('여자', 28);
+        // useon.sayAsk();
+
+        // function study() {
+        //     this.a = 'main';
+        //     this.b = 'sub';
+        // }
+
+        // study.prototype.name = 'kang'
+        // var nunu = new study();
+    </script> -->
+
+
+
+    <!-- <script>
+        document.getElementById('close').addEventListener('click', function () {
+            document.getElementById('parameterBox').style.display = 'none';
+        })
+
+        function parameterEvent(show, text) {
+            document.getElementById('parameterBox').style.display = show;
+            document.getElementById('content').innerHTML = text;
+        }
+
+        function openEvent(구멍) {
+            document.getElementById('alert').style.display = 구멍;
+        }
+
+    </script> -->
+    <!-- <script src="app.js"></script> -->
+</body>
+
+</html>

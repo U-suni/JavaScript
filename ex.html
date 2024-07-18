@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function game(num) {
+            if (num % 3 == 0) {
+                console.log("박수");
+            } else {
+                console.log('통과');
+            }
+
+            if (num % 9 == 0) {
+                console.log('박박수수');
+            }
+        }
+        game(18);
+
+
+        function study(a, b) {
+            if((a > 40 && b > 40) && a+b> 120) {
+                console.log('합격');
+            } else {
+                console.log('불합격');
+            }
+
+            if(0> a,b >100) {
+                console.log('장난치지마라');
+            }
+        }
+        study(-10, 110);
+
+
+
+    </script>
+</body>
+
+</html>
